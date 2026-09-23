@@ -1,0 +1,50 @@
+[
+  {
+    "name": "bootling",
+    "index": 0,
+    "prompt": "Standalone landscape background for a charming virtual pet game, polished 2D illustrated diorama, rounded shapes, restrained dark blue outlines, soft dimensional shading, tactile toy aesthetic. Front-facing room, slight elevated perspective, consistent scale. Large empty center foreground floor (central 50 percent must be clear for an animated robot overlaid later), props arranged at back wall and extreme sides. Floor fills lower third, wall upper two thirds. No robots, people, animals, text, logos, UI, frames, borders or watermarks. Cohesive with mint and cream toy robot. Room: charging nursery with mint walls, cozy warm amber lamp, tiny shelves and charging equipment to the sides, soft morning light",
+    "status": "completed",
+    "type": "image",
+    "model": "gpt_image_2_5"
+  },
+  {
+    "name": "buddy",
+    "index": 1,
+    "prompt": "Standalone landscape background for a charming virtual pet game, polished 2D illustrated diorama, rounded shapes, restrained dark blue outlines, soft dimensional shading, tactile toy aesthetic. Front-facing room, slight elevated perspective, consistent scale. Large empty center foreground floor (central 50 percent must be clear for an animated robot overlaid later), props arranged at back wall and extreme sides. Floor fills lower third, wall upper two thirds. No robots, people, animals, text, logos, UI, frames, borders or watermarks. Cohesive with mint and cream toy robot. Room: playful blue bedroom with toy blocks and cushions along sides, round sunny window, joyful and lived-in",
+    "status": "completed",
+    "type": "image",
+    "model": "gpt_image_2_5"
+  },
+  {
+    "name": "prototype",
+    "index": 2,
+    "prompt": "Standalone landscape background for a charming virtual pet game, polished 2D illustrated diorama, rounded shapes, restrained dark blue outlines, soft dimensional shading, tactile toy aesthetic. Front-facing room, slight elevated perspective, consistent scale. Large empty center foreground floor (central 50 percent must be clear for an animated robot overlaid later), props arranged at back wall and extreme sides. Floor fills lower third, wall upper two thirds. No robots, people, animals, text, logos, UI, frames, borders or watermarks. Cohesive with mint and cream toy robot. Room: teal and ochre workshop with tool pegboard and soldering bench at edges, cozy industrious light",
+    "status": "completed",
+    "type": "image",
+    "model": "gpt_image_2_5"
+  },
+  {
+    "name": "companion",
+    "index": 3,
+    "prompt": "Standalone landscape background for a charming virtual pet game, polished 2D illustrated diorama, rounded shapes, restrained dark blue outlines, soft dimensional shading, tactile toy aesthetic. Front-facing room, slight elevated perspective, consistent scale. Large empty center foreground floor (central 50 percent must be clear for an animated robot overlaid later), props arranged at back wall and extreme sides. Floor fills lower third, wall upper two thirds. No robots, people, animals, text, logos, UI, frames, borders or watermarks. Cohesive with mint and cream toy robot. Room: warm peach and cream cozy studio with plants and a music and reading corner, golden afternoon sunlight",
+    "status": "completed",
+    "type": "image",
+    "model": "gpt_image_2_5"
+  },
+  {
+    "name": "guardian",
+    "index": 4,
+    "prompt": "Standalone landscape background for a charming virtual pet game, polished 2D illustrated diorama, rounded shapes, restrained dark blue outlines, soft dimensional shading, tactile toy aesthetic. Front-facing room, slight elevated perspective, consistent scale. Large empty center foreground floor (central 50 percent must be clear for an animated robot overlaid later), props arranged at back wall and extreme sides. Floor fills lower third, wall upper two thirds. No robots, people, animals, text, logos, UI, frames, borders or watermarks. Cohesive with mint and cream toy robot. Room: navy blue city lookout with panoramic twilight city window, subtle amber lights and side consoles, calm and protective",
+    "status": "completed",
+    "type": "image",
+    "model": "gpt_image_2_5"
+  },
+  {
+    "name": "overlord",
+    "index": 5,
+    "prompt": "Standalone landscape background for a charming virtual pet game, polished 2D illustrated diorama, rounded shapes, restrained dark blue outlines, soft dimensional shading, tactile toy aesthetic. Front-facing room, slight elevated perspective, consistent scale. Large empty center foreground floor (central 50 percent must be clear for an animated robot overlaid later), props arranged at back wall and extreme sides. Floor fills lower third, wall upper two thirds. No robots, people, animals, text, logos, UI, frames, borders or watermarks. Cohesive with mint and cream toy robot. Room: purple and charcoal secret lair with geometric architecture and glowing magenta side consoles, theatrical yet cute, no throne at center",
+    "status": "completed",
+    "type": "image",
+    "model": "gpt_image_2_5"
+  }
+]
