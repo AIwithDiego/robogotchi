@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img" aria-labelledby="t d">
+  <title id="t">How Robogotchi works</title>
+  <desc id="d">You open the game. useGame takes the single-writer lock for the tab, loads and validates the save, and asks the engine to catch up on the time that passed while the game was closed. The engine replays that time in one pass, stopping only at the moments something changes: rust starts, heat peaks, the battery hits zero, the rescue window closes. Care actions and lessons are pure reducers on the same state. Three lessons pick the adult route. The new state is saved to localStorage with a backup. The 60-second demo runs the same engine on an in-memory save.</desc>
+  <style>
+    .bg{fill:#172124}
+    .card{fill:#1f2d30;stroke:#354345;stroke-width:1.5}
+    .hot{fill:#233d39;stroke:#98ebc8;stroke-width:1.5}
+    .h{font:600 19px 'Space Grotesk','Segoe UI',system-ui,sans-serif;fill:#e9e8d8}
+    .p{font:14px 'DM Sans','Segoe UI',system-ui,sans-serif;fill:#9daaa4}
+    .f{font:12px ui-monospace,SFMono-Regular,Menlo,monospace;fill:#98ebc8}
+    .k{font:600 12px 'Space Grotesk','Segoe UI',system-ui,sans-serif;letter-spacing:1.5px;fill:#f2b95e}
+    .a{stroke:#98ebc8;stroke-width:2;fill:none;marker-end:url(#m)}
+    .d{stroke:#9daaa4;stroke-width:1.5;fill:none;stroke-dasharray:5 5;marker-end:url(#n)}
+    .r1{fill:#98ebc8}.r2{fill:#f2b95e}.r3{fill:#f18a70}
+  </style>
+  <defs>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#98ebc8"/></marker>
+    <marker id="n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#9daaa4"/></marker>
+  </defs>
+  <rect class="bg" width="1200" height="560" rx="18"/>
+  <text class="k" x="40" y="48">HOW ROBOGOTCHI WORKS · NO SERVER, ONE BROWSER TAB WRITES</text>
+
+  <!-- 1 open -->
+  <rect class="card" x="40" y="80" width="250" height="150" rx="12"/>
+  <text class="h" x="60" y="114">1 · You come back</text>
+  <text class="p" x="60" y="142">Open the page, hours or</text>
+  <text class="p" x="60" y="162">days later. Charge, clean,</text>
+  <text class="p" x="60" y="182">play, answer a lesson.</text>
+  <text class="f" x="60" y="212">src/App.tsx, components/</text>
+
+  <!-- 2 useGame -->
+  <rect class="card" x="340" y="80" width="250" height="150" rx="12"/>
+  <text class="h" x="360" y="114">2 · One tab is in charge</text>
+  <text class="p" x="360" y="142">Web Locks pick the writer;</text>
+  <text class="p" x="360" y="162">other tabs go read-only.</text>
+  <text class="p" x="360" y="182">Demo uses a memory save.</text>
+  <text class="f" x="360" y="212">useGame.ts, tabOwnership.ts</text>
+
+  <!-- 3 engine -->
+  <rect class="hot" x="640" y="80" width="520" height="150" rx="12"/>
+  <text class="h" x="660" y="114">3 · The engine catches up on lost time, in one pass</text>
+  <text class="p" x="660" y="142">It jumps from one change point to the next instead of</text>
+  <text class="p" x="660" y="162">ticking every second, so three days away is one calculation.</text>
+  <text class="f" x="660" y="212">engine.ts (advanceTo), neglect.ts, config.ts</text>
+  <!-- timeline -->
+  <line x1="1000" y1="190" x2="1140" y2="190" stroke="#354345" stroke-width="2"/>
+  <circle cx="1010" cy="190" r="5" class="r1"/><circle cx="1050" cy="190" r="5" class="r2"/><circle cx="1090" cy="190" r="5" class="r3"/><circle cx="1130" cy="190" r="5" fill="#e9e8d8"/>
+
+  <path class="a" d="M290 155H334"/>
+  <path class="a" d="M590 155H634"/>
+
+  <!-- change points legend -->
+  <rect class="card" x="640" y="262" width="520" height="104" rx="12"/>
+  <text class="k" x="660" y="290">CHANGE POINTS</text>
+  <circle cx="668" cy="316" r="5" class="r1"/><text class="p" x="682" y="321">rust starts (12 h untended)</text>
+  <circle cx="918" cy="316" r="5" class="r2"/><text class="p" x="932" y="321">heat hits its limit</text>
+  <circle cx="668" cy="346" r="5" class="r3"/><text class="p" x="682" y="351">battery or integrity at zero</text>
+  <circle cx="918" cy="346" r="5" fill="#e9e8d8"/><text class="p" x="932" y="351">12 h rescue window closes</text>
+  <path class="d" d="M900 230V256"/>
+
+  <!-- 4 lessons -->
+  <rect class="card" x="40" y="262" width="550" height="104" rx="12"/>
+  <text class="h" x="60" y="294">4 · Three lessons pick who it becomes</text>
+  <text class="p" x="60" y="320">Each answer is a vote. Most votes wins; a tie goes to the last.</text>
+  <rect x="60" y="334" width="110" height="22" rx="11" fill="#98ebc8" fill-opacity=".15" stroke="#98ebc8"/><text class="f" x="78" y="350">companion</text>
+  <rect x="182" y="334" width="100" height="22" rx="11" fill="#f2b95e" fill-opacity=".15" stroke="#f2b95e"/><text class="f" x="200" y="350" style="fill:#f2b95e">guardian</text>
+  <rect x="294" y="334" width="100" height="22" rx="11" fill="#f18a70" fill-opacity=".15" stroke="#f18a70"/><text class="f" x="312" y="350" style="fill:#f18a70">overlord</text>
+  <text class="f" x="414" y="350">evolution.ts</text>
+
+  <!-- 5 save -->
+  <rect class="card" x="40" y="398" width="1120" height="128" rx="12"/>
+  <text class="h" x="60" y="432">5 · The save stays in your browser</text>
+  <text class="p" x="60" y="460">Written to localStorage with a backup copy. Imports are treated as a stranger's input: size caps, a field-by-field</text>
+  <text class="p" x="60" y="480">check, no prototype lookups. Old v1 and v2 saves are migrated to schema v3. Nothing is sent anywhere.</text>
+  <text class="f" x="60" y="508">save.ts · localStorage · Settings → Export / Import</text>
+  <path class="a" d="M900 366V392"/>
+</svg>
