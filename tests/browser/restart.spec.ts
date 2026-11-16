@@ -51,5 +51,6 @@ test('the demo cannot erase real progress and can restart with its own name',asy
 test('a second tab cannot erase progress and follows the owner back to the welcome screen',async({page,context})=>{
  await seed(page);const second=await context.newPage();await second.goto('/');await expect(second.getByText(/Your robot is active in another tab/)).toBeVisible();await second.getByRole('button',{name:'Settings',exact:true}).click();await expect(second.getByRole('button',{name:'Start from scratch',exact:true})).toBeDisabled();await second.getByRole('button',{name:'Close dialog'}).click()
  await openErase(page);await page.getByRole('button',{name:'Delete progress & start fresh'}).click();await expect(second.getByLabel('Every great robot starts with a name.')).toBeVisible();expect((await read(second)).album).toBeNull()
- await page.close();await second.getByRole('button',{name:'Take over',exact:true}).click();await expect(second.getByRole('button',{name:/Boot my robot/})).toBeEnabled();expect((await read(second)).robot).toBeNull()
+ await page.close();await second.getByRole('button',{name:'Take over',exact:true}).click();// Closing a tab releases its Web Lock asynchronously; Linux WebKit in CI can take over 5 s.
+ await expect(second.getByRole('button',{name:/Boot my robot/})).toBeEnabled({timeout:15000});expect((await read(second)).robot).toBeNull()
 })
