@@ -12,7 +12,6 @@
 [![Three real days to grow up, three lessons decide who it becomes, zero servers: the save stays in your browser](docs/assets/cover.png)](https://robogotchi-nine.vercel.app)
 
 A case study. My entry for a Skool community challenge to build a playable game with AI, September 2026, and the one that won. Spec on 13 September, built with Codex in four days, made public after a security pass with Claude Code.
-<!-- TODO(Diego): name of the Skool community, the date winners were announced, how entries were judged (votes? the host?), and the place (1st?). None of it is in the folders; only "won" is on record (GH-8 gate, 9 Nov). -->
 
 **[Play it](https://robogotchi-nine.vercel.app)** (no account, the save stays in your browser; try the 60-second demo) · [Run it yourself](#run-it-yourself)
 
@@ -107,7 +106,7 @@ The idea and the calls were mine, and the spec came first: [`docs/ROBOGOTCHI-Bui
 | 16 Sep | Activity poses fixed: arms in front of the body, the coffee cup upright, checked across all 54 form, shape and activity combinations |
 | 23 Sep | Pre-public audit: provenance metadata stripped, fonts self-hosted, CSP and Permissions-Policy, CI with a full-history gitleaks scan. Public release, [`c9ee517`](https://github.com/AIwithDiego/robogotchi/commit/c9ee517) |
 | 24 Sep | Dependabot grouped, major versions left for deliberate upgrades ([#6](https://github.com/AIwithDiego/robogotchi/pull/6)) |
-| 30 Sep | Challenge deadline. <!-- TODO(Diego): submission date and the result announcement date --> |
+| 30 Sep | Challenge deadline. |
 | 16 Nov | Browser tests added to CI, a stale test fixed, this README |
 
 **Tests.** 70 unit tests (Vitest) cover the elapsed-time simulation, neglect and rescue windows, evolution routes, save validation and migration, and arcade rewards. 32 browser flows (Playwright) run in desktop Chromium, mobile Chromium, Firefox and WebKit, 128 runs in all, with a controlled clock so days pass in milliseconds: naming and care, offline death, emergency repair, two tabs, a corrupt save, import and export, restart, the demo staying isolated.
@@ -203,7 +202,7 @@ docs/             the original spec, QA notes, asset provenance, how-it-works.sv
 
 ## Credits
 
-React 19, TypeScript, Vite, Vitest, Playwright and oxlint. Code written with [Codex](https://openai.com/codex/) from my spec; the pre-public audit and this write-up with [Claude Code](https://www.anthropic.com/claude-code). Room backgrounds generated with Higgsfield (GPT Image 2.5). DM Sans and Space Grotesk under the SIL Open Font License. Inspired by the handheld virtual pets of the '90s. Thanks to the Skool community that ran the challenge and played it. <!-- TODO(Diego): name the community and its host if you want them credited. --> Issues and pull requests welcome: [CONTRIBUTING.md](CONTRIBUTING.md).
+React 19, TypeScript, Vite, Vitest, Playwright and oxlint. Code written with [Codex](https://openai.com/codex/) from my spec; the pre-public audit and this write-up with [Claude Code](https://www.anthropic.com/claude-code). Room backgrounds generated with Higgsfield (GPT Image 2.5). DM Sans and Space Grotesk under the SIL Open Font License. Inspired by the handheld virtual pets of the '90s. Thanks to the Skool community that ran the challenge and played it. Issues and pull requests welcome: [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Licence
 
