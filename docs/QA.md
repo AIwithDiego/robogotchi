@@ -53,7 +53,7 @@ Browser emulation is not physical-device testing. These results do not claim tes
 - Web Locks provides single-writer ownership in current browsers. The fallback conservatively stops competing tabs and requires closing other tabs and taking over/reloading; it deliberately provides no concurrent editing.
 - V2 album retains 80 moments and 50 memorials; automatic stage IDs are retained separately to avoid regenerating evicted photos. Backup imports are limited to 250 KB; standalone robot saves retain the 100 KB limit.
 - Arcade time stops on pause/hidden tabs; the robot’s care clock continues. A cancelled/short round receives no score or reward. Practice rounds do not spend care meters.
-- Typography uses Google Fonts with system fallbacks. Artwork, sound, simulation and state require no third-party runtime service.
+- Typography is self-hosted (DM Sans, Space Grotesk) with system fallbacks. Artwork, sound, simulation and state require no third-party runtime service.
 
 ## Real-run checklist
 
