@@ -45,7 +45,7 @@ test('offline death, one memorial and replay',async({page})=>{
  const s=createRobot('RUSTY',startTime.getTime()-48*HOUR,'dead-qa')
  await page.addInitScript(({key,state})=>{if(!localStorage.getItem(key))localStorage.setItem(key,JSON.stringify(state))},{key:KEYS.robot,state:s})
  await page.goto('/');await expect(page.getByText('A little light, remembered.')).toBeVisible();await page.reload();await expect(page.getByRole('button',{name:'Boot a new robot',exact:true})).toBeEnabled();const c=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)!),KEYS.collection);expect(c.memorials).toHaveLength(1);expect(c.memorials[0].ageMs).toBe(44.5*HOUR)
- await page.getByRole('button',{name:'Boot a new robot',exact:true}).click();await expect(page.getByRole('heading',{name:'BEEP',exact:true})).toBeVisible();await page.getByRole('button',{name:/^Memories/}).click();await expect(page.getByText('RUSTY',{exact:true})).toBeVisible()
+ await page.getByRole('button',{name:'Boot a new robot',exact:true}).click();await page.getByRole('dialog',{name:'Raise another robot'}).getByRole('button',{name:'Boot new robot',exact:true}).click();await expect(page.getByRole('heading',{name:'BEEP',exact:true})).toBeVisible();await page.getByRole('button',{name:/^Memories/}).click();await expect(page.getByText('RUSTY',{exact:true})).toBeVisible()
 })
 test('emergency repair returns control and records lasting wear',async({page})=>{
  const s=createRobot('RESCUE',startTime.getTime()-34*HOUR,'rescue-qa')
